@@ -30,23 +30,23 @@ const NextLaunch = () => {
         setSeconds(Math.floor(totalSeconds) % 60);
     }
 
-    // timer();
-    // setTimeout(() => {
-    //     timer();
-    // }, 1000);
+
+    setTimeout(() => {
+        timer();
+    }, 1000);
 
     return (
-        <div className="container">
-            <h1>Upcoming : {isloaded ? next.name : ''}</h1>
-            <div className="contain">
-                <h1>{isloaded ? day : 0}</h1>
-                <p>DAYS</p>
-                <h1>{isloaded ? hour : 0}</h1>
-                <p>HOURS</p>
-                <h1>{isloaded ? minutes : 0}</h1>
-                <p>MINUTES</p>
-                <h1>{isloaded ? seconds : 0}</h1>
-                <p>SECONDS</p>
+        <div className="bg-gradient-to-r from-blue-500  to-gray-700   flex flex-col items-center py-24  ">
+            <h1 className="font-bold text-6xl mb-24 text-white">Upcoming : {isloaded ? next.name : ''}</h1>
+            <div className="bg-gray-700 px-56 py-16 rounded-lg text-center text-white font-mono ">
+                <h1 className="text-8xl mb-2">{isloaded ? day : 0}</h1>
+                <p className="border border-white rounded-lg px-2 mb-5 tracking-tight inline-block text-xl " >DAYS</p>
+                <h1 className="text-8xl mb-2">{isloaded ? hour : 0}</h1>
+                <p className="border border-white rounded-lg  px-2 mb-5 tracking-tight inline-block text-xl">HOURS</p>
+                <h1 className="text-8xl mb-2">{isloaded ? minutes : 0}</h1>
+                <p className="border border-white rounded-lg px-2 mb-5 tracking-tight inline-block text-xl">MINUTES</p>
+                <h1 className="text-8xl mb-2">{isloaded ? seconds : 0}</h1>
+                <p className="border border-white rounded-lg px-2 tracking-tight inline-block text-xl">SECONDS</p>
             </div>
 
         </div>
